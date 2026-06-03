@@ -87,6 +87,7 @@ function getPlanetary(date) {
   }
   xhr.send();
   xhr.responseType = "json";
+  displaySection1('');
   xhr.addEventListener("load", function () {
     var res = xhr.response;
     console.log(res);
@@ -117,6 +118,7 @@ function displaySection1(data) {
   icon.className = "far fa-calendar mr-2";
 
   if (data.url) {
+    apodDateDetail.textContent = ''
     apodImage.classList.remove("hidden");
     apodLoading.classList.add("hidden");
     apodImage.setAttribute("src", data.url);
@@ -127,7 +129,7 @@ function displaySection1(data) {
     apodTitle.textContent = data.title;
     data.copyright ? apodCopyright.innerHTML = `&copy; ${data.copyright}`: apodCopyright.innerHTML = `&copy; NASA/JPL`;
     apodDateInfo.textContent = data.date;
-    apodMediaType.textContent = data.media_type;
+    apodMediaType.textContent = data.media_type.toUpperCase();
   } else {
     apodLoading.classList.remove("hidden");
     apodImage.classList.add("hidden");
@@ -137,5 +139,6 @@ function displaySection1(data) {
     apodExplanation.textContent = "Loading description...";
     apodDateInfo.textContent = 'Loading...';
     apodMediaType.textContent = 'Loading...';
+    
   }
 }
