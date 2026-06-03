@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -169,9 +169,7 @@
               <h2 class="text-xl md:text-2xl font-space font-bold mb-1">
                 Today in Space
               </h2>
-              <p id="apod-date" class="text-slate-400 text-xs md:text-sm">
-                
-              </p>
+              <p id="apod-date" class="text-slate-400 text-xs md:text-sm"></p>
             </div>
             <div class="flex items-center space-x-2 md:space-x-3">
               <label for="apod-date-input" class="date-input-wrapper">
@@ -179,8 +177,6 @@
                   type="date"
                   id="apod-date-input"
                   class="custom-date-input"
-                  
-                  max=""
                   min="1995-06-16"
                 />
                 <span id="date-show" class="text-sm">Dec 17, 2025</span>
@@ -213,12 +209,7 @@
                   <p class="text-slate-400">Loading today's image...</p>
                 </div>
                 <!-- Using a placeholder image or one from assets if available. Using a reliable external placeholder for now or a relative path if we knew one. Sticking to a colored placeholder div if no image, but let's try a realistic placeholder or just the rocket icon style used elsewhere if we want to be safe. But user wants design. I'll use a relative path assuming assets exist or a generic space placeholder. -->
-                <img
-                  id="apod-image"
-                  class="w-full h-full object-cover"
-                  
-                  alt="Astronomy Picture of the Day"
-                />
+                <img id="apod-image" class="w-full h-full object-cover" />
                 <div
                   class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                 >
@@ -239,34 +230,22 @@
                 <h3
                   id="apod-title"
                   class="text-lg md:text-2xl font-semibold mb-3 md:mb-4"
-                >
-                  The Rosette Nebula
-                </h3>
+                ></h3>
                 <div
                   class="flex items-center space-x-4 mb-4 text-sm text-slate-400"
                 >
                   <span id="apod-date-detail">
                     <!-- <i class="far fa-calendar mr-2"></i>2024-03-14 -->
-                    </span
-                  >
+                  </span>
                 </div>
                 <p
                   id="apod-explanation"
                   class="text-slate-300 leading-relaxed mb-4"
-                >
-                  The Rosette Nebula is a large spherical H II region located
-                  near one end of a giant molecular cloud in the Monoceros
-                  region of the Milky Way Galaxy. The open cluster NGC 2244
-                  (Caldwell 50) is closely associated with the nebulosity, the
-                  stars of the cluster having been formed from the nebula's
-                  matter.
-                </p>
+                ></p>
                 <div
                   id="apod-copyright"
                   class="text-xs text-slate-400 italic mb-4"
-                >
-                  &copy; NASA/JPL
-                </div>
+                ></div>
               </div>
               <div
                 class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6"
@@ -278,13 +257,11 @@
                 <div class="space-y-3 text-sm">
                   <div class="flex justify-between">
                     <span class="text-slate-400">Date</span>
-                    <span id="apod-date-info" class="font-medium"
-                      >2024-03-14</span
-                    >
+                    <span id="apod-date-info" class="font-medium"></span>
                   </div>
                   <div class="flex justify-between">
                     <span class="text-slate-400">Media Type</span>
-                    <span id="apod-media-type" class="font-medium">Image</span>
+                    <span id="apod-media-type" class="font-medium"></span>
                   </div>
                   <div class="flex justify-between">
                     <span class="text-slate-400">Source</span>
@@ -667,8 +644,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="mercury"
               style="--planet-color: #eab308"
-              onmouseover="this.style.borderColor='#eab30880'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#eab30880'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -685,8 +662,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="venus"
               style="--planet-color: #f97316"
-              onmouseover="this.style.borderColor='#f9731680'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#f9731680'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -703,8 +680,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="earth"
               style="--planet-color: #3b82f6"
-              onmouseover="this.style.borderColor='#3b82f680'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#3b82f680'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -721,8 +698,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="mars"
               style="--planet-color: #ef4444"
-              onmouseover="this.style.borderColor='#ef444480'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#ef444480'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -739,8 +716,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="jupiter"
               style="--planet-color: #fb923c"
-              onmouseover="this.style.borderColor='#fb923c80'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#fb923c80'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -757,8 +734,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="saturn"
               style="--planet-color: #facc15"
-              onmouseover="this.style.borderColor='#facc1580'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#facc1580'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -775,8 +752,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="uranus"
               style="--planet-color: #06b6d4"
-              onmouseover="this.style.borderColor='#06b6d480'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#06b6d480'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img
@@ -793,8 +770,8 @@
               class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
               data-planet-id="neptune"
               style="--planet-color: #2563eb"
-              onmouseover="this.style.borderColor='#2563eb80'"
-              onmouseout="this.style.borderColor='#334155'"
+              onmouseover="this.style.borderColor = '#2563eb80'"
+              onmouseout="this.style.borderColor = '#334155'"
             >
               <div class="relative mb-3 h-24 flex items-center justify-center">
                 <img

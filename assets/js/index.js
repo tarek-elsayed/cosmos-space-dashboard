@@ -32,12 +32,16 @@ function setDateToday() {
   const month = String(today.getMonth() + 1).padStart(2, "0");
   const year = today.getFullYear();
 
-  standerDate = `${day}-${month}-${year}`;
+    standerDate = `${year}-${month}-${day}`;
+
 }
 
 setDateToday();
 
 function updateDateText() {
+  const today = new Date();
+  dateInput.max = today.toISOString().split("T")[0];
+
   const selectedDate = new Date(dateInput.value);
   publicDate = selectedDate.toLocaleDateString("en-US", {
     month: "short",
@@ -106,6 +110,9 @@ function displaySection1(data) {
   const apodTitle = document.getElementById("apod-title");
   const apodDateDetail = document.getElementById("apod-date-detail");
   const apodExplanation = document.getElementById("apod-explanation");
+  const apodCopyright = document.getElementById("apod-copyright");
+  const apodDateInfo = document.getElementById("apod-date-info");
+  const apodMediaType = document.getElementById("apod-media-type");
   const icon = document.createElement("i");
   icon.className = "far fa-calendar mr-2";
 
@@ -113,9 +120,14 @@ function displaySection1(data) {
     apodImage.classList.remove("hidden");
     apodLoading.classList.add("hidden");
     apodImage.setAttribute("src", data.url);
+    apodImage.setAttribute("alt", data.title);
     apodDateDetail.appendChild(icon);
     apodDateDetail.append(data.date);
     apodExplanation.textContent = data.explanation;
+    apodTitle.textContent = data.title;
+    data.copyright ? apodCopyright.innerHTML = `&copy; ${data.copyright}`: apodCopyright.innerHTML = `&copy; NASA/JPL`;
+    apodDateInfo.textContent = data.date;
+    apodMediaType.textContent = data.media_type;
   } else {
     apodLoading.classList.remove("hidden");
     apodImage.classList.add("hidden");
@@ -123,5 +135,7 @@ function displaySection1(data) {
     apodDateDetail.appendChild(icon);
     apodDateDetail.append("Loading...");
     apodExplanation.textContent = "Loading description...";
+    apodDateInfo.textContent = 'Loading...';
+    apodMediaType.textContent = 'Loading...';
   }
 }
