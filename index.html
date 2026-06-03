@@ -170,7 +170,7 @@
                 Today in Space
               </h2>
               <p id="apod-date" class="text-slate-400 text-xs md:text-sm">
-                Astronomy Picture of the Day - March 14, 2024
+                
               </p>
             </div>
             <div class="flex items-center space-x-2 md:space-x-3">
@@ -179,11 +179,11 @@
                   type="date"
                   id="apod-date-input"
                   class="custom-date-input"
-                  value="2024-03-14"
+                  
                   max=""
                   min="1995-06-16"
                 />
-                <span class="text-sm">Dec 17, 2025</span>
+                <span id="date-show" class="text-sm">Dec 17, 2025</span>
               </label>
               <button
                 id="load-date-btn"
@@ -216,7 +216,7 @@
                 <img
                   id="apod-image"
                   class="w-full h-full object-cover"
-                  src="./assets/images/placeholder.webp"
+                  
                   alt="Astronomy Picture of the Day"
                 />
                 <div
@@ -245,8 +245,9 @@
                 <div
                   class="flex items-center space-x-4 mb-4 text-sm text-slate-400"
                 >
-                  <span id="apod-date-detail"
-                    ><i class="far fa-calendar mr-2"></i>2024-03-14</span
+                  <span id="apod-date-detail">
+                    <!-- <i class="far fa-calendar mr-2"></i>2024-03-14 -->
+                    </span
                   >
                 </div>
                 <p
