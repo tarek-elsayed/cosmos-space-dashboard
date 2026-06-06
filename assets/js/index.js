@@ -62,7 +62,7 @@ function updateDateText() {
 dateInput.addEventListener("change", updateDateText);
 
 section_1.addEventListener("click", () => {
-  section_1.classList.remove("hidden");
+  todayInSpace.classList.remove("hidden");
   section_1.classList.add("bg-blue-500/10", "text-blue-400");
 
   launches.classList.add("hidden");
